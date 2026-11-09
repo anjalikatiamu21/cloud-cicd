@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud CI/CD Dashboard</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#08142d,#164b83,#07152f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+.container { width: 900px; max-width: 100%; text-align: center; }
+h1 { font-size: 38px; margin-bottom: 10px; }
+.subtitle { color: #c5d8f5; margin-bottom: 35px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+.card {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.15);
+  padding: 25px 18px;
+  border-radius: 16px;
+  text-align: left;
+}
+.value { color: #65efb0; font-size: 23px; font-weight: bold; margin-bottom: 12px; }
+.label { font-weight: bold; }
+.detail { color: #c3d2e8; font-size: 12px; margin-top: 8px; }
+.wide { grid-column: span 2; }
+.pipeline {
+  margin-top: 25px;
+  padding: 22px;
+  background: rgba(0,0,0,.18);
+  border-radius: 16px;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+.step {
+  padding: 16px 5px;
+  background: rgba(255,255,255,.1);
+  border-radius: 10px;
+}
+.check { color: #65efb0; font-size: 24px; }
+.step small { display: block; color: #c3d2e8; margin-top: 8px; }
+.tags { margin: 25px 0; }
+.tag {
+  display: inline-block;
+  padding: 9px 15px;
+  margin: 4px;
+  background: rgba(91,168,255,.2);
+  border-radius: 20px;
+  font-size: 13px;
+}
+footer { color: #c3d2e8; font-size: 13px; margin-top: 25px; }
+@media(max-width:600px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .wide { grid-column: span 2; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 29px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Cloud CI/CD Dashboard</h1>
+<div class="subtitle">
+Multi-Stage Automated Build, Test & Deployment Pipeline - Version 3.1
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="value">✓ Running</div>
+<div class="label">Application Status</div>
+<div class="detail">Service is responding normally</div>
+</div>
+
+<div class="card">
+<div class="value">4/4 Passed</div>
+<div class="label">Automated Tests</div>
+<div class="detail">All test cases successful</div>
+</div>
+
+<div class="card">
+<div class="value">✓ Ready</div>
+<div class="label">Docker Image</div>
+<div class="detail">Container build completed</div>
+</div>
+
+<div class="card wide">
+<div class="value">✓ Connected</div>
+<div class="label">GitHub Actions</div>
+<div class="detail">CI pipeline integrated</div>
+</div>
+
+<div class="card">
+<div class="value">v1.0.4</div>
+<div class="label">Latest Build</div>
+<div class="detail">Demo release</div>
+</div>
+
+</div>
+
+<div class="pipeline">
+<h3>Pipeline Execution</h3>
+<div style="color:#65efb0;font-size:13px;">
+ALL STAGES COMPLETED
+</div>
+
+<div class="steps">
+<div class="step">
+<div class="check">✓</div>
+<b>Source</b>
+<small>Code retrieved</small>
+</div>
+<div class="step">
+<div class="check">✓</div>
+<b>Build</b>
+<small>Build successful</small>
+</div>
+<div class="step">
+<div class="check">✓</div>
+<b>Test</b>
+<small>4 of 4 passed</small>
+</div>
+<div class="step">
+<div class="check">✓</div>
+<b>Deploy</b>
+<small>Deployment ready</small>
+</div>
+</div>
+</div>
+
+<div class="tags">
+<span class="tag">Node.js</span>
+<span class="tag">Express</span>
+<span class="tag">Docker</span>
+<span class="tag">GitHub Actions</span>
+</div>
+
+<footer>
+Cloud CI/CD Pipeline automatically builds, tests and deploys applications.
+<br><br>
+© 2026 Cloud CI/CD Dashboard
+</footer>
+
+</div>
+</body>
+</html>
